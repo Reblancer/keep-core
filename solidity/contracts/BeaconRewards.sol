@@ -24,6 +24,10 @@ contract BeaconRewards is Rewards {
         tokenStaking = TokenStaking(_stakingContract);
     }
 
+    function receiveReward(uint256 i) public {
+        receiveReward(bytes32(i));
+    }
+
     function minimumKeepsPerInterval() public view returns (uint256) {
         return _minimumKeepsPerInterval;
     }
